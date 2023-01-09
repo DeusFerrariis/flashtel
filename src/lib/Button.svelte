@@ -17,8 +17,8 @@
 	export let label: String = "";
 	export let bg: String = "var(--blue)";
 	export let fg: String = "var(--white)";
-	export let hoverBg: String = "var(--blue)";
-	export let hoverFg: String = "var(--white)";
+	export let hoverBg: String = bg;
+	export let hoverFg: String = fg;
 	export let size: Size = Size.Medium;
 
 	let buttonStyle = `
