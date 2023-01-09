@@ -19,3 +19,33 @@ little to no cost for end users.
   - Alternative Study Modes
   - Exported Flashcard Data
   - Alternative Decentralized Persistence (FileCoin Snapshots or IPFS Pinning)
+
+## Running Locally / Installing
+
+> ### INFO
+> 
+> Until an MVP is availible installation options are limited to running the project
+> preview. Feel free to submit a PR for a run/install script if you have one.
+
+### Linux/Mac
+
+#### Requirements
+- Equivalent Node Version
+- Yarn / npm
+
+- 1. Clone this repository locally
+- 2. Install project dependencies
+
+```sh
+yarn
+# or if using npm
+npm install
+````
+
+- 3. Run project in browser
+
+```sh
+yarn preview
+# or if using npm
+npm run preview
+```
