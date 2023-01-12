@@ -104,5 +104,4 @@ dist
 .tern-port
 
 # SvelteKit generated files
-.svelte-kit/ambient.d.ts
-.svelte-kit/generated
+.svelte-kit/
