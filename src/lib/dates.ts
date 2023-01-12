@@ -1,4 +1,4 @@
-const PROJECT_START_DATE = "2023";
+export const PROJECT_START_DATE = "2023";
 
 export const getCopyrightYear = (startYear: String): String => {
 	let currentYear = (new Date()).getFullYear();

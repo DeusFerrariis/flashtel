@@ -14,7 +14,8 @@
       size="large" 
       bg="var(--green)"
       fg="var(--grey)"
-      label="Sign Up"/>
+      label="Sign Up"
+		/>
   </div>
 </header>
 
