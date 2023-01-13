@@ -1,14 +1,58 @@
 <script lang="ts">
 	import Deck from "$lib/Deck.svelte";
+	import Button from "$lib/Button.svelte";
+	let cardCount = 0;
+	let deck;
+	let index = 0;
+	let cards;
+	
+	$: if (cards) {
+		cardCount = cards.length
+		console.log(cardCount, index);
+	}
 </script>
 
 <div class="content">
 	<section class="flash-card">
-		<Deck />
+		<Deck bind:index bind:cards bind:this={deck} />
+		<br />
+		<div class="deck-buttons">
+			{#if index > 0}
+				<Button 
+					label="Previous"
+					on:click={deck.previous}
+					fg="var(--grey)"
+					bg="var(--green)"
+					size="large"
+				/>
+			{:else}
+				<div />
+			{/if}
+			{#if index + 1 < cardCount}
+				<Button 
+					label="Next"
+					on:click={deck.next}
+					fg="var(--grey)"
+					bg="var(--green)"
+					size="large"
+				/>
+			{:else}
+				<div />
+			{/if}
+		</div>
 	</section>
 </div>
 
 <style>
+	div.deck-buttons {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+
 	div.content {
 		padding-top: 32px;
 		width: 100%;
