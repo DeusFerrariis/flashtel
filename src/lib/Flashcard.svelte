@@ -4,7 +4,7 @@
 	export let term = "Term";
 	export let definition = "Definition";
 
-	$: flipped = false;
+	export let flipped = false;
 	const dispatch = createEventDispatcher();
 	const flip = () => {
 		flipped = !flipped;
@@ -15,18 +15,28 @@
 <div on:click={flip} class="flash-card flip no-select">
 	<div class:flipped={flipped} class="flash-card flip-inner no-select">
 		<div class="flash-card term no-select">
+			<div class="label">
+				<slot name="label" />
+			</div>
 			<p class="term no-select">{term}</p>
 		</div>
 
 		<div class="flash-card definition no-select">
+			<div class="label">
+				<slot name="label" />
+			</div>
 			<p class="term no-select">{definition}</p>
 		</div>
 	</div>
 </div>
 
 <style>
+	div.label {
+		position: absolute;
+		bottom: 0;
+		right: 16px;
+	}
 	div.flash-card {
-		width: 100%;
 		aspect-ratio: 5 / 3; 
 		cursor: pointer;
 		z-index: 200;
