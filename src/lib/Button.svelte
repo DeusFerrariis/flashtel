@@ -71,6 +71,7 @@
 		color: var(--hFg);
 		background-color: var(--hBg);
 		box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.4);
+		cursor: pointer;
 	}
 	
 	button:active {
