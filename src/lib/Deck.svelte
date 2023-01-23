@@ -135,7 +135,7 @@
 		font-size: 12px;
 		font-weight: 600;
 		border-radius: 4px;
-		background-color: var(--green);
+		background-color: var(--yellow);
 		padding: 2px;
 		padding-left: 4px;
 		padding-right: 4px;
