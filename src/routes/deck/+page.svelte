@@ -4,7 +4,14 @@
 	let cardCount = 0;
 	let deck;
 	let index = 0;
-	let cards;
+	let cards = [
+		{term: "What is the cloud concept of availibility?", definition: "No idea."},
+		{term: "What is the cloud concept of availibility?", definition: "No idea."},
+		{term: "What is the cloud concept of availibility?", definition: "No idea."},
+		{term: "What is the cloud concept of availibility?", definition: "No idea."},
+		{term: "What is the cloud concept of availibility?", definition: "No idea."},
+		{term: "What is the cloud concept of availibility?", definition: "No idea."},
+	];
 	
 	$: if (cards) {
 		cardCount = cards.length

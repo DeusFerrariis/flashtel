@@ -1,5 +1,7 @@
 <script lang="ts">
   import Button from "$lib/Button.svelte";
+  import {user, username, signUp, signOut} from "$lib/user.ts";
+  console.log($username == "");
 </script>
 
 <header>
@@ -7,15 +9,33 @@
     <h1 id="title">Flashlet</h1>
   </div>
   <div class="header-section" id="center">
-    <Button size="large" label="New Set" />
+      {#if !($username == "")}
+        <Button 
+          size="large" 
+    		>
+          <a href="/deck/new">
+            New Deck
+          </a>
+        </Button>
+      {/if}
   </div>
   <div class="header-section" id="last">
-    <Button 
-      size="large" 
-      bg="var(--green)"
-      fg="var(--grey)"
-      label="Sign Up"
-		/>
+    {#if $username == ""}
+      <Button
+        size="large"
+      >
+          <a href="/auth">
+            Sign In
+          </a>
+      </Button>
+    {:else}
+      <Button 
+        size="large" 
+        bg="var(--red)"
+        on:click={signOut}
+        label="Sign Out"
+  		/>
+    {/if}
   </div>
 </header>
 
@@ -52,5 +72,13 @@
     margin-top: 0px;
     margin-bottom: 0px;
     opacity: 0.8;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
   }
 </style>

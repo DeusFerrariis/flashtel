@@ -14,6 +14,7 @@
 		dispatch('click');
 	}
 
+	export let ref;
 	export let label: String = "";
 	export let bg: String = "var(--blue)";
 	export let fg: String = "var(--white)";
@@ -31,6 +32,7 @@
 </script>
 
 <button 
+	{ref}
 	on:click={click}
 	style={buttonStyle}
 	class:small={size == "small"}
